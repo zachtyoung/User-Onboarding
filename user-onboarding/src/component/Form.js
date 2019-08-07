@@ -57,9 +57,12 @@ console.log(users)
 
         <button type="submit">Submit!</button>
       </Form>
-      <div className="container">
+      
+    </div>
+    <div className="user-container">
           <h1>Users</h1>
-    {users.map(el => <div className="user-return">{el.name}</div>)}
+          <div className="back">
+    {users.map((el, index) => <h4 className="user-return">{index+ 1 + ". " + el.name}</h4>)}
     </div>
     </div>
     </>
