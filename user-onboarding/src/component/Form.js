@@ -3,20 +3,6 @@ import axios from 'axios';
 import { Form, Field, withFormik } from 'formik';
 import * as Yup from 'yup';
 
-
-/*
-  deleted:
-    state, ✅
-    handleChanges, ✅
-    handleSubmit ✅
-    form onSubmit ✅
-    input values ✅
-    input onChange ✅
-    labels ✅
-*/
-
-// Tasks - Add two fields - size, notes. Don't forget to add them to the values in mPTV
-
 const UserForm = ({ errors, touched, values, handleSubmit, status }) => {
   const [users, setUsers] = useState([]);
 console.log(users)
@@ -95,6 +81,6 @@ const FormikUserForm = withFormik({
       })
       .catch(err => console.log(err.response));
   }
-})(UserForm); // currying functions in Javascript
+})(UserForm);
 
 export default FormikUserForm;
